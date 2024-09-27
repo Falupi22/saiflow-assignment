@@ -1,0 +1,60 @@
+{
+  "name": "lambda-exercise",
+  "$schema": "./node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "./src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/esbuild:esbuild",
+      "options": {
+        "bundle": true,
+        "thirdParty": true,
+        "generatePackageJson": true,
+        "main": "./src/main.ts",
+        "tsConfig": "./tsconfig.app.json",
+        "outputPath": "dist/lambda-exercise",
+        "sourcemap": "inline",
+        "target": "esnext",
+        "external": [
+          "pg-native",
+          "url"
+        ],
+        "esbuildOptions": {
+          "banner": {
+            "js": "const require = (await import('node:module')).createRequire(import.meta.url);const __filename = (await import('node:url')).fileURLToPath(import.meta.url);const __dirname = (await import('node:path')).dirname(__filename);"
+          },
+          "outExtension": {
+            "js": ".mjs"
+          }
+        }
+      },
+      "configurations": {
+        "debug": {
+          "minify": false,
+          "tsConfig": "./tsconfig.debug.json"
+        }
+      }
+    },
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          "sam build --build-dir ./dist/lambda-exercise --template template.yaml",
+          "sleep 5 && sam local invoke --docker-network host --template ./dist/lambda-exercise/template.yaml --event ./events/OcppMessages.event.json"
+        ],
+        "cwd": "."
+      },
+      "configurations": {
+        "windows": {
+          "commands": [
+            "sam build --build-dir ./dist/lambda-exercise --template template.yaml",
+            "ping -n 5 127.0.0.1 >NUL && sam local invoke --docker-network host --template ./dist/lambda-exercise/template.yaml --event ./events/OcppMessages.event.json"
+          ]
+        }
+      }
+    }
+  },
+  "tags": [
+    "type:lambda"
+  ]
+}

@@ -12,3 +12,7 @@ Thumbs.db
 
 # Generated files
 .nx/
+
+.env
+ASSIGNMENT.md
+README-assignment.md

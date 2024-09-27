@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  exercise-postgres:
+    image: public.ecr.aws/q6o1z1w8/lambda-exercise:exercise-postgres-image-latest
+    ports:
+      - "5432:5432"
+
+  aws-secret-manager:
+    image: public.ecr.aws/q6o1z1w8/lambda-exercise:secretsmanager-local
+    ports:
+      - "7000:7000"

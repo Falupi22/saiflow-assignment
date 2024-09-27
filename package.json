@@ -1,0 +1,24 @@
+{
+	"name": "saiflow-assignment",
+	"version": "1.0.0",
+	"description": "SaiFlow's home exercise setup instructions, the assignment specification is listed in [ASSIGNMENT.md](ASSIGNMENT.md)",
+	"main": "webpack.config.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"aws-lambda": "^1.0.7",
+		"esbuild": "^0.21.5",
+		"nx": "^19.2.3",
+		"pg": "^8.13.0"
+	},
+	"devDependencies": {
+		"@types/node": "^22.7.3",
+		"@types/pg": "^8.11.10",
+		"eslint": "^9.11.1",
+		"globals": "^15.9.0",
+		"typescript-eslint": "^8.7.0"
+	},
+	"author": "",
+	"license": "ISC"
+}
