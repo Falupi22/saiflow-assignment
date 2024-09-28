@@ -35,6 +35,7 @@ or
 ```bash
 pnpm i
 ```
+In case you used only npm install and it shows an error about a lost modules file, use ``pnpm i`` too.
 
 ## Getting Started
 
