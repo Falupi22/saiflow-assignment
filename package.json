@@ -1,24 +1,28 @@
 {
-	"name": "saiflow-assignment",
-	"version": "1.0.0",
-	"description": "SaiFlow's home exercise setup instructions, the assignment specification is listed in [ASSIGNMENT.md](ASSIGNMENT.md)",
-	"main": "webpack.config.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"dependencies": {
-		"aws-lambda": "^1.0.7",
-		"esbuild": "^0.21.5",
-		"nx": "^19.2.3",
-		"pg": "^8.13.0"
-	},
-	"devDependencies": {
-		"@types/node": "^22.7.3",
-		"@types/pg": "^8.11.10",
-		"eslint": "^9.11.1",
-		"globals": "^15.9.0",
-		"typescript-eslint": "^8.7.0"
-	},
-	"author": "",
-	"license": "ISC"
+  "name": "saiflow-assignment",
+  "version": "1.0.0",
+  "description": "SaiFlow's home exercise setup instructions, the assignment specification is listed in [ASSIGNMENT.md](ASSIGNMENT.md)",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "ip": "^2.0.1",
+    "node-fetch": "^3.3.2",
+    "nx": "^19.2.3",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.3",
+    "@types/pg": "^8.11.10",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.11.1",
+    "globals": "^15.9.0",
+    "nx": "19.8.2",
+    "typescript-eslint": "^8.7.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "nx": {}
 }

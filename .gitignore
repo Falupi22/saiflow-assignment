@@ -16,3 +16,7 @@ Thumbs.db
 .env
 ASSIGNMENT.md
 README-assignment.md
+
+
+.nx/cache
+.nx/workspace-data

@@ -1,26 +1,35 @@
 interface Message {
-    messageType: string;
-    timestamp: string;
-    forwardCsms: string;
-    chargerIdentifier: string;
-    tenantId: string;
-    saiflowMessageId: string;
-    ipAddr: string;
-    dstIpAddr: string;
-    srcAsset: string;
-    port: string;
-    conId: string;
-    data: Data;
+    MessageType: string;
+    Timestamp: string;
+    ForwardCsms: string;
+    ChargerIdentifier: string;
+    TenantId: string;
+    SaiflowMessageId: string;
+    IpAddr: string;
+    DstIpAddr: string;
+    SrcAsset: string;
+    Port: string;
+    ConId: string;
+    Data: Data;
 }
 
 interface Data {
-    initiatedByGw: boolean;
-    payload: (number | string | PayloadData)[];
-    ocppAcceptedVersion: string;
+    InitiatedByGw: boolean | null;
+    Payload: (number | string | PayloadData)[] | null;
+    Authorization: Authorization | null;
+    OcppAcceptedVersion: string | null;
 }
 
 interface PayloadData {
-    currentTime: string;
+    CurrentTime: string;
+}
+
+interface Authorization {
+    OverTls: boolean;
+    Basic: boolean;
+    ClientCert: boolean;
+    Successful: boolean;
+    ErrorMessage: string;
 }
 
 export default Message

@@ -1,4 +1,4 @@
-import getClientConnection from "./getClientConnection"
-import { buildInsertQuery } from "./queryBuilder"
+import getConnectionPool from "./getConnectionPool"
+import { insertData } from "./queryHandler"
 
-export { getClientConnection, buildInsertQuery }
+export { getConnectionPool, insertData }
